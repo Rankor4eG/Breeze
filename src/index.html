@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Webpack Template</title>
+  <link href="https://fonts.googleapis.com/css?family=Bitter&display=swap" rel="stylesheet">
+  <script>
+
+  </script>
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <div class="header__phone">
+          <img src="./assets/img/phone.png" alt="" class="header__phone-img">
+          <span class="header__phone-number">
+            <a href="#">Call Us +777 (100) 1234</a>
+          </span>
+        </div>
+        <div class="header__description">
+          Welcome visitor you can
+          <a href="#">login</a>
+          or
+          <a href="#" class="modal-show" data-modal="#sign-in">create an account.</a>
+        </div>
+        <div class="header__buttons">
+          <div class="header__buttons-language">
+            <button class="btn-language header__button-language">en</button>
+            <button class="btn-language header__button-language">fr</button>
+            <button class="btn-language header__button-language">gm</button>
+          </div>
+          <div class="header__buttons-currency">
+            <button class="btn-currency header__button-currency">$</button>
+            <button class="btn-currency header__button-currency">€</button>
+            <button class="btn-currency header__button-currency">£</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="clients-panel">
+    <div class="container">
+      <div class="client-panel">
+        <div class="client-panel__logo">
+          <div class="client-panel__logo-img">
+            <img src="./assets/img/logo.png" alt="">
+          </div>
+          <div class="client-panel__logo-text">
+            Online Store Theme
+          </div>
+        </div>
+        <div class="client-panel__search">
+        </div>
+        <div class="client-panel__list">
+          <ul class="client-panel__items">
+            <li class="client-panel__item">
+              <span>My Account</span>
+            </li>
+            <li class="client-panel__item">
+              <span>My Wishlist</span>
+            </li>
+            <li class="client-panel__item">
+              <span>Log In</span>
+            </li>
+            <li class="client-panel__item">
+              <span class="modal-show" data-modal="#sign-in">Sign Up</span>
+            </li>
+          </ul>
+          <div class="client-panel__list-deposit">
+            <img src="./assets/img/deposit.png" alt="">
+            <div class="client-panel__list-deposit-text">
+              Cart $0.00
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-bar">
+        <ul class="nav-bar__items">
+          <li class="nav-bar__item">
+            Home
+          </li>
+          <li class="nav-bar__item">Solids</li>
+          <li class="nav-bar__item">Liquids</li>
+          <li class="nav-bar__item">Spray</li>
+          <li class="nav-bar__item">Electric</li>
+          <li class="nav-bar__item">For cars</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="test">
+    <button class="btn-ru">RU</button>
+    <button class="btn-en">EN</button>
+    <div class="div1 ru">Добрый день Дорогой</div>
+    <div class="div1 en">Guten Tag liebe</div>
+    <div class="div2 ru">Как твои дела</div>
+    <div class="div2 en">What is das??</div>
+
+    <div class="modal-wrap hide">
+      <form class="modal hide" id="sign-in">
+        <div class="modal-close" data-modal="#sign-in">X</div>
+        <input type="text" class="textSign" placeholder="Username">
+        <input type="email" class="emailSign" placeholder="Email">
+        <input type="password" class="passwordSign" placeholder="Password">
+        <input type="password" class="passwordSign" placeholder="Password">
+        <div class="modal__chek-box">
+          <input type="checkbox" id="chekSignIn">
+          <label for="chekSignIn" class="modal__chek-box-label">I agree to data processing</label>
+        </div>
+        <button>Create Account</button>
+      </form>
+    </div>
+    <div class="modal-overlay hide" data-overlay="#over-sign"></div>
+    
+
+  </div>
+
+</body>
+
+</html>

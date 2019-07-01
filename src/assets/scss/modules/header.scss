@@ -1,0 +1,39 @@
+// header style
+.header__inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header{
+    background-color: #f5f7f9;
+    height: 100%;
+    width: 100%;
+    &__phone{
+        position: relative;
+        &-img{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        &-number{
+            font-size: 11px;
+            margin-left: 22px;
+            a{
+                color: #444444;
+            }
+        }
+    }
+    &__description{        
+        font-family: 'Bitter', serif;        
+        font-size: 12px;
+        a{
+            color: #59b7c2;
+        }    
+    }  
+    &__buttons{
+        display: flex;   
+        &-language{
+            margin-right: 25px;
+        }     
+    }  
+}
