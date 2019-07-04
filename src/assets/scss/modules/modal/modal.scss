@@ -1,0 +1,90 @@
+// modal style
+
+.modal{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 30px 30px 20px;
+    border: 2px solid #444444;
+    background: #222;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    &-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 1; 
+     }
+    &-wrap{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        align-content: stretch;
+        z-index: 2;
+    }  
+    &-close{
+        font-size: 14px;
+        color: #fff;
+        position: absolute;
+        top: 4px;
+        right: 15px;
+        cursor: pointer;
+    }
+    input{
+        margin-bottom: 10px;
+        border: 1px solid black;
+        border-radius: 4px;
+        background: #444;
+        color: #fff;
+        padding: 10px;
+        font: 16px sans-serif;
+    }
+    input::placeholder {
+        color: rgb(192, 179, 179);
+    }
+    &__chek-box{
+        display: flex;
+        align-self: baseline;
+        margin-top: 20px;
+        position: relative;
+        input{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }     
+        &-label{
+            margin-left: 25px;
+            font: 16px sans-serif;
+            color: #fff;
+        }
+    }
+    button{
+        margin-top: 20px;
+        color: #fff;
+        background: #444;
+        border-radius: 4px;
+        padding: 10px 5px;
+        transition: background-color 1s ease, color 1s ease;
+        &:hover{
+            background-color: #777;
+            color: #000;
+        }
+    }
+    &-show{
+        cursor: pointer;
+    }    
+}
+
+.hide{
+    display: none;
+}

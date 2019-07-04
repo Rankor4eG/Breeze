@@ -1,17 +1,24 @@
-let modalWrap = document.querySelector('.modal');
-let modalOverlay = document.querySelector('.modal-overlay');
 let form = document.querySelector('form');
-let modalShow = document.querySelectorAll('.modal-show');
+
+let modalWrapSign = document.querySelector('.modal-sign');
+let modalWrapLog = document.querySelector('.modal-log');
+let modalOverlay = document.querySelector('.modal-overlay');
+let modalShowSign = document.querySelectorAll('.modal-show__sign');
+let modalShowLog = document.querySelectorAll('.modal-show__log');
 
 export function eventInit() {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
     });
 
-    modalShow.forEach(function (e) {
-        e.addEventListener('click', showModal)
-    })
+    modalShowSign.forEach(function (e) {
+        e.addEventListener('click', function () { return showModal(modalWrapSign); })
+    });
 
+    modalShowLog.forEach(function (e) {
+        e.addEventListener('click', function () { return showModal(modalWrapLog); })
+    });
+ 
     document.querySelectorAll('.modal-close').forEach(function (e) {
         e.addEventListener('click', closeModal)
     });
@@ -19,16 +26,24 @@ export function eventInit() {
     document.querySelectorAll('.modal-overlay').forEach(function (e) {
         e.addEventListener('click', closeModal)
     });
+
+    document.addEventListener('keydown', event => {
+        if(event.keyCode == 27){
+            return closeModal();
+        }
+       
+    })
 }
 
-function showModal() {
+function showModal(name){
+    return name.classList.remove('hide'),
     modalOverlay.classList.remove('hide');
-    modalWrap.classList.remove('hide');
-    modalWrap.parentElement.classList.remove('hide');
+    
 }
 
 function closeModal() {
     modalOverlay.classList.add('hide');
-    modalWrap.classList.add('hide');
-    modalWrap.parentElement.classList.add('hide');
+    modalWrapSign.classList.add('hide');
+    modalWrapLog.classList.add('hide');
+    document.addEventListener('keydown', null)
 }

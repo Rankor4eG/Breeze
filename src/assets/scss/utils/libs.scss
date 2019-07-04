@@ -7,6 +7,7 @@ body{
 }
 
 .container{
+    position: relative;
     margin: 0 auto;
     // background-color: red;
     max-width: 1000px;
@@ -17,7 +18,7 @@ body{
 button{
    margin-right: -3px !important;
    text-transform: uppercase;
-
+    cursor: pointer;
 }
 
 .btn-language{
@@ -31,4 +32,8 @@ button{
     height: 36px;
     font-size: 13px;
     font-family: 'Bitter', serif; 
+}
+
+.btn-active {
+    background-color: #78c4cd;
 }
